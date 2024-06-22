@@ -1,0 +1,9 @@
+<p class="mb-2">Name on Account - {{ isset(bankAccount($bank,'uk')->name) ? bankAccount($bank,'uk')->name : null }} </p>
+<p class="mb-2">Address of Account Holder - {{ isset(bankAccount($bank,'uk')->address) ? bankAccount($bank,'uk')->address : null }} </p>
+<p class="mb-2">Account Number - {{ isset(bankAccount($bank,'uk')->account_number) ? bankAccount($bank,'uk')->account_number : null }} </p>
+<p class="mb-2">Sort Code - {{ isset(bankAccount($bank,'uk')->sort_code) ? bankAccount($bank,'uk')->sort_code : null }} </p>
+<p class="mb-2">IBAN - {{ isset(bankAccount($bank,'uk')->iban) ? bankAccount($bank,'uk')->iban : null }} </p>
+<p class="mb-2">Bank Name - {{ isset(bankAccount($bank,'uk')->bank_name) ? bankAccount($bank,'uk')->bank_name : null }} </p>
+<p class="mb-2">Bank Address - {{ isset(bankAccount($bank,'uk')->bank_address) ? bankAccount($bank,'uk')->bank_address : null }} </p>
+<p class="mb-2">Postal Code - {{ isset(bankAccount($bank,'uk')->postal_code) ? bankAccount($bank,'uk')->postal_code : null }} </p>
+<p class="mb-2">Sharpline Distro Password - {{ isset(bankAccount($bank,'uk')->password) ? bankAccount($bank,'uk')->password : null }} </p>
