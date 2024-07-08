@@ -132,8 +132,9 @@ class ReleaseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
+        $id = $request->id;
         $user = User::where('id', auth()->user()->id)->first();
         $verification = $user->is_verified;
         $date = date('Y-m-d', strtotime($user->email_verified_at));
