@@ -17,10 +17,11 @@ class BulkReleaseController extends Controller
         return view('user-portal.pages.revamp.bulk-upload');
     }
 
-    public function show($id)
+    public function show()
     {
-        $user = User::findOrFail(auth()->user()->id); // Retrieve the authenticated user
-        $release_data = Release::findOrFail($id); // Retrieve the release by its ID
+        $user = User::findOrFail(auth()->user()->id); // Get ths user
+        // $release_data = Release::where('user_id', $user->id)->latest()->first(); // Get tge lastest release of that user
+        $release_data = Release::find($user); // Get the releases of that user
         return view('user-portal.pages.revamp.releases.artist-show', compact('user', 'release_data'));
     }
 }
