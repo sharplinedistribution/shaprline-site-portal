@@ -120,7 +120,7 @@ class ReleaseController extends Controller
         // return redirect()->route('user.release.index')->with('error','Something Went Wrong');
 
         if (!empty($store->id)) {
-            return redirect()->route('user.create-bulk-release.show', ['id' => $store->id])->with('success', 'Track Uploaded');
+            return redirect()->route('user.delivered', ['id' => $store->id])->with('success', 'Track Uploaded');
         }
 
         return redirect()->route('user.release.index')->with('error', 'Something Went Wrong');

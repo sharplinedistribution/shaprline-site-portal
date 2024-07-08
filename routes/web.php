@@ -116,7 +116,7 @@ Route::name('user.')->prefix('user')->group(function () {
             Route::post('delete-and-modify-royalty-split', [RoyaltySplitsController::class, 'deleteAndModify'])->name('royalty-splits.deleteAndModify');
             Route::post('delete-royalty-split', [RoyaltySplitsController::class, 'delete'])->name('royalty-splits.delete');
 
-            Route::get('create-bulk-release', [BulkReleaseController::class, 'createBulkRelease'])->name('create-bulk-release');
+            Route::post('delivered', [BulkReleaseController::class, 'createBulkRelease'])->name('delivered');
             Route::get('create-bulk-release/show/{id}', [BulkReleaseController::class, 'show'])->name('create-bulk-release.show');
 
 

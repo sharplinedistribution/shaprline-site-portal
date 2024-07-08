@@ -49,26 +49,6 @@
                                                    border-radius: 20%;
                                                    margin: auto;
                                                    display: block;">
-                                        <p style="text-align: center; margin-top: 20px; font-weight: bold; color: white;">
-                                            {{ $release_data->album_title }}
-                                        </p>
-                                        <p
-                                            style="text-align: center; margin-bottom: 10px; font-weight: bold; color: white;">
-                                            {{ $release_data->label }}
-                                        </p>
-                                    </div>
-                                    <div class="text-center">
-                                        <!-- Social media icons -->
-                                        <a href="#" style="color: white; text-decoration: none; margin: 0 5px;">
-                                            <i class="fab fa-facebook-f fa-lg"></i>
-                                        </a>
-                                        <a href="#" style="color: white; text-decoration: none; margin: 0 5px;">
-                                            <i class="fab fa-twitter fa-lg"></i>
-                                        </a>
-                                        <a href="#" style="color: white; text-decoration: none; margin: 0 5px;">
-                                            <i class="fab fa-instagram fa-lg"></i>
-                                        </a>
-                                        <!-- Add more social icons as needed -->
                                     </div>
                                 </div>
                             </div>
