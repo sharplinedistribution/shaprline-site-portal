@@ -30,15 +30,6 @@
         <div class="row">
             <div class="container-fluid align-items-center p-2">
                 <div class="row mb-4 w-100">
-                    <div class="col-md-12">
-                        @if (auth()->user()->is_subscribed != 1)
-                            {!! trialExpiry() !!}
-                        @else
-                            {!! subscriptionExpiry() !!}
-                        @endif
-                    </div>
-                </div>
-                <div class="row mb-4 w-100">
                     <div class="d-flex justify-content-center align-items-center">
                         <div class="col-md-12" style="position: relative; overflow: hidden; max-width: 500px;">
                             <div class="blur-background"
