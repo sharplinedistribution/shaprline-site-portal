@@ -21,6 +21,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('country')->nullable(); //Additional added in this
+            $table->tinyInteger('is_verified')->default();  //Additional added in this
             $table->tinyInteger('is_subscribed')->default();
             $table->rememberToken();
             $table->timestamps();

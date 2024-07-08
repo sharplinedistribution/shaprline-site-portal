@@ -94,7 +94,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'country' => $data['country'],
             'password' => Hash::make($data['password']),
-            'password_string' => $data['password'],
+            // 'password_string' => $data['password'],
             'is_verified' => 1,
             'email_verified_at' => $trialDate,
         ]);

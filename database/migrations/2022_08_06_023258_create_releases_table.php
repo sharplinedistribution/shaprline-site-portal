@@ -20,11 +20,14 @@ return new class extends Migration
             $table->string('album_artwork');
             $table->string('upc_code')->nullable();
             $table->string('version')->nullable()->default('original');
+            $table->date('previous_release_date')->nullable();
+            $table->tinyInteger('is_previous_released')->default(0);
             $table->text('artist');
             $table->date('release_date');
             $table->string('language');
             $table->string('primary_genre');
             $table->string('secondary_genre')->nullable();
+            $table->string('label')->nullable();
             $table->text('stores');
             $table->text('track_ids');
             $table->integer('user_id');
