@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Release;
+use Str;
 use App\Models\User;
+use App\Models\Release;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
-use Str;
 
 class BulkReleaseController extends Controller
 {
@@ -19,9 +20,9 @@ class BulkReleaseController extends Controller
 
     public function show()
     {
-        $user = User::findOrFail(auth()->user()->id); // Get ths user
-        $release_data = Release::where('user_id', $user->id)->latest()->first(); // Get tge lastest release of that user
-        // $release_data = Release::find($user); // Get the releases of that user
+        $id = Session::put('release_id');
+        $user = User::findOrFail(auth()->user()->id); // Retrieve the authenticated user
+        $release_data = Release::findOrFail($id); // Retrieve the release by its ID
         return view('user-portal.pages.revamp.releases.artist-show', compact('user', 'release_data'));
     }
 }

@@ -119,8 +119,9 @@ class ReleaseController extends Controller
         // }
         // return redirect()->route('user.release.index')->with('error','Something Went Wrong');
 
+        Session::put('release_id', $store->id);
         if (!empty($store->id)) {
-            return redirect()->route('user.delivered', ['id' => $store->id])->with('success', 'Track Uploaded');
+            return redirect()->route('user.delivered')->with('success', 'Track Uploaded');
         }
 
         return redirect()->route('user.release.index')->with('error', 'Something Went Wrong');
