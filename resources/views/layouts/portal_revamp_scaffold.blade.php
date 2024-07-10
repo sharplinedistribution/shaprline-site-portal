@@ -163,9 +163,9 @@
                     <div class="d-flex justify-content-between mt-4 align-items-center">
                         <div>
                             <h2 class="user-name">
-                                Hi, <span>{{$user->name}}</span>
+                                Hi, <span>{{auth()->user()->name??''}}</span>
                             </h2>
-                            @if($user->is_subscribed != 1){!! trialExpiry() !!} @else {!! subscriptionExpiry() !!} @endif
+                            @if(auth()?->user()->is_subscribed != 1){!! trialExpiry() !!} @else {!! subscriptionExpiry() !!} @endif
                         </div>
                         <div class="mt-sm-0 mt-3">
                             @stack('button')
