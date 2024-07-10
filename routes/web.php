@@ -66,6 +66,8 @@ Route::get('css-1', [SiteController::class, 'css1'])->name('site.css1');
 
 Auth::routes();
 Route::name('user.')->prefix('user')->group(function () {
+    Route::get('delivered', [BulkReleaseController::class, 'show'])->name('delivered');
+
     Route::group(['middleware' => ['isVerified', 'auth']], function () {
         Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
         Route::group(['middleware' => ['isBan']], function () {
@@ -117,7 +119,6 @@ Route::name('user.')->prefix('user')->group(function () {
             Route::post('delete-royalty-split', [RoyaltySplitsController::class, 'delete'])->name('royalty-splits.delete');
 
             Route::get('create-bulk-release', [BulkReleaseController::class, 'createBulkRelease'])->name('create-bulk-release');
-            Route::get('delivered', [BulkReleaseController::class, 'show'])->name('delivered');
 
 
             Route::post('royalty-split-collaborator', [RoyaltySplitsController::class, 'collaboratorStatus'])->name('royalty-splits.collaboratorStatus');
