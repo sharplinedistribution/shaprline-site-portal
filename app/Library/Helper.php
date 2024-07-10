@@ -313,7 +313,7 @@ function topCountries($id){
 }
 function trialExpiry(){
     $now = time(); // or your date as well
-    $your_date = strtotime(auth()->user()->email_verified_at);
+    $your_date = strtotime(auth()?->user()?->email_verified_at);
     $datediff = $your_date- $now ;
     $diff=  round($datediff / (60 * 60 * 24));
     if($diff > 0){
