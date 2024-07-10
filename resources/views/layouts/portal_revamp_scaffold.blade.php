@@ -9,8 +9,8 @@
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-5GLTSRS');</script>
         <!-- End Google Tag Manager -->
-        
-        
+
+
      <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-6JKCZCTKBN"></script>
         <script>
@@ -78,7 +78,7 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5GLTSRS"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
-    
+
     <script>
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -163,9 +163,9 @@
                     <div class="d-flex justify-content-between mt-4 align-items-center">
                         <div>
                             <h2 class="user-name">
-                                Hi, <span>{{auth()->user()->name}}</span>
+                                Hi, <span>{{$user->name}}</span>
                             </h2>
-                            @if(auth()->user()->is_subscribed != 1){!! trialExpiry() !!} @else {!! subscriptionExpiry() !!} @endif
+                            @if($user->is_subscribed != 1){!! trialExpiry() !!} @else {!! subscriptionExpiry() !!} @endif
                         </div>
                         <div class="mt-sm-0 mt-3">
                             @stack('button')
