@@ -18,7 +18,7 @@
         <!-- Main Menu -->
         <div class="side-menu-container w-100" >
             <ul class="nav navbar-nav">
-                <li><a href="javascript:;" class="btn  border-0 d-none">Hi, {{auth()->user()->name}}</a></li>
+                <li><a href="javascript:;" class="btn  border-0 d-none">Hi, {{auth()?->user()->name}}</a></li>
                 <li><a href="{{route('user.dashboard')}}" class="btn @if(URL::current() == route('user.dashboard')) active @endif">Home</a></li>
                 <li><a href="{{route('user.release.create')}}" class="btn @if(URL::current() == route('user.release.create')) active @endif">Create Release</a></li>
                 <li><a href="{{route('user.create-bulk-release')}}" class="btn @if(URL::current() == route('user.create-bulk-release')) active @endif">Create Bulk Release</a></li>
