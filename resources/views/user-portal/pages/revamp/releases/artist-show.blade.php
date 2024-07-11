@@ -64,6 +64,13 @@
     <!-- partial -->
 @endsection
 @push('scripts')
+    <!-- Event snippet for Page conversion page -->
+    <script>
+        gtag('event', 'conversion', {
+            'send_to': 'AW-10979779748/amflCMDZ_8EZEKTJyPMo'
+        });
+    </script>
+
     <!-- inject:js -->
     <script src="{{ asset('portal/assets/js/off-canvas.js') }}"></script>
     <script src="{{ asset('portal/assets/js/hoverable-collapse.js') }}"></script>
